@@ -3,7 +3,7 @@
 //  counters and visibility detection
 // ============================================================
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 /**
  * Returns [ref, isInView] — triggers once element enters viewport

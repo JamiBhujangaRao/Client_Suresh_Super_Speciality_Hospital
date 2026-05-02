@@ -4,7 +4,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Send, CheckCircle, Phone, Calendar, AlertCircle } from 'lucide-react';
+import { X, CheckCircle, Phone, Calendar, AlertCircle } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import './AppointmentModal.css';
 

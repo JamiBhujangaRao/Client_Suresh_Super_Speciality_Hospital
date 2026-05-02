@@ -5,7 +5,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-  Phone, Mail, MapPin, Clock, MessageCircle,
+  Phone, MapPin, Clock, MessageCircle,
   Send, CheckCircle, AlertCircle,
 } from 'lucide-react';
 import { hospitalInfo } from '../data/data';

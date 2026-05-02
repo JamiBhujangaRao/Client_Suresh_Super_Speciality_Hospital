@@ -3,7 +3,6 @@
 // ============================================================
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Phone, MapPin, Clock, Instagram, ExternalLink, Heart } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { hospitalInfo } from '../data/data';
