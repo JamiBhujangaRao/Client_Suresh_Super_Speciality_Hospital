@@ -1,0 +1,235 @@
+/* ── Appointment Modal ── */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(5, 12, 28, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.modal-panel {
+  background: white;
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 640px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.4);
+  scrollbar-width: thin;
+}
+
+/* Header */
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 28px 20px;
+  border-bottom: 1px solid var(--gray-100);
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.modal__header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.modal__logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid rgba(8,145,178,0.4);
+}
+
+.modal__title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+
+.modal__subtitle {
+  font-size: 0.72rem;
+  color: var(--teal-light);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.modal__close-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.modal__close-btn:hover {
+  background: rgba(239,68,68,0.3);
+}
+
+/* Body */
+.modal__body {
+  padding: 28px;
+}
+
+/* Form */
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.modal__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.modal__label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  letter-spacing: 0.02em;
+}
+
+.modal__input {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1.5px solid var(--gray-200);
+  background: var(--gray-50);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--gray-800);
+  transition: border-color 0.25s, box-shadow 0.25s;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.modal__input:focus {
+  border-color: var(--teal);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(8,145,178,0.1);
+}
+
+.modal__input--error {
+  border-color: #EF4444;
+}
+
+.modal__select {
+  cursor: pointer;
+}
+
+.modal__textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.modal__error {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.73rem;
+  color: #EF4444;
+  font-weight: 500;
+}
+
+.modal__submit {
+  width: 100%;
+  justify-content: center;
+  padding: 14px;
+  font-size: 1rem;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.modal__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.modal__spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin-slow 0.7s linear infinite;
+  display: inline-block;
+}
+
+.modal__privacy {
+  font-size: 0.72rem;
+  color: var(--gray-400);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Success */
+.modal__success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  gap: 14px;
+}
+
+.modal__success-icon {
+  color: #22C55E;
+}
+
+.modal__success h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.modal__success p {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  max-width: 340px;
+  line-height: 1.7;
+}
+
+.modal__success-contact {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ── Responsive ── */
+@media (max-width: 540px) {
+  .modal__row {
+    grid-template-columns: 1fr;
+  }
+  .modal__body {
+    padding: 20px 18px;
+  }
+  .modal-panel {
+    border-radius: var(--radius-lg);
+  }
+}
